@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    
+    <title> H2I | Recipes </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="H2I|Recipes">
+    <link rel="icon" href="images/logotrans.png" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/recipes.js"></script>
+    <link rel="stylesheet prefetch" href="css/recipes.css">
+  </head>
+<body  onload="show();"> <!-- Body statred -->
+    <div id="preloader"> <!-- animation while loading the page -->
+        <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
+    </div>
+    
+    <header>
+        
+        <nav class="navbar navbar-expand-lg navbar-light"> <!-- nav bar using bootstrap -->
+          <a class="navbar-brand" href="index.html">
+            <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
+            <img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sportwear.html">Sport Wears</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="equipement.html">Training Machines</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="protein.html">Proteins</a>
+                  </li>
+                <li class="nav-item   active">
+                    <a class="nav-link" href="recipes.html">Recipes</a>
+                  </li>
+                  
+              </ul>
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search" id="searchfld">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form> 
+              
+            </div>
+          </nav>
+    </header>
+    <main id="refresh">   <!--main started -->  
+          <div class="itemscategories"> <!--filter the recipes into sweets, salts, etc.-->
+            <button class="itemscategoriesbtn" id="all" onclick="choose('all');">All</button>
+            <button class="itemscategoriesbtn" id="sweets" onclick="choose('sweets');">Sweets</button>
+            <button class="itemscategoriesbtn" id="salts" onclick="choose('salts');" >Salts</button>
+            <button class="itemscategoriesbtn" id="drinks" onclick="choose('drinks');">Drinks</button>
+          </div>
+          <div id="recipesitems">
+        <section id="photos"> <!-- the recipes grid -->
+            <div class="grid-container-one">
+              <a href="#" id="pop5" onclick="ccc(5)">    <div class="grid-box" value="sweets"> 
+                      <img  id="imageresource5"  src="images/dishes/r1.jpg" class="imgradious"> 
+                                   <div class="info">
+                                      <p id="title5">Wild Peanut Butter Cups
+                                        </p>
+                                      <p id="description5" style="display:none;">
+                                          <strong>Ingredients</strong><br>
+                                          9-ounces dark chocolate chips<br>
+                                          1 teaspoon coconut oil (or grass-fed butter)<br>
+                                          1 cup peanut butter, no sugar added (or almond butter or other nut/seed butter)<br>
+                                          2 tablespoons coconut palm sugar<br>
+                                          dash of stevia, to taste<br>
+                                          dash of sea salt<br>
+                                          12 paper muffin cups (cut down to about 1” high)<br>
+                                          Optional toppings: Nuts, berries, sea salt, coconut flakes<br>
+                                        <strong>Instructions</strong><br>
+                                          1-Cut 12 paper muffin cups down to about 1” high, and place in a muffin tin. Set aside.<br>
+                                          2-In a small pot or double-boiler set over lowest heat, melt the chocolate with the coconut oil, stirring regularly, until just completely melted. Set aside to slightly cool.<br>
+                                          3-In a mixing bowl, stir together peanut butter with coconut palm sugar, stevia, and sea salt. Taste and add a dash more coconut palm sugar, stevia and/or salt, to taste.<br>
+                                          4-Form the peanut butter dough into 12 small patties.<br>
+                                          5-Pour about a teaspoon of chocolate mixture into the bottom of each muffin cup.<br>
+                                          6-Place one peanut butter patty onto each dollop of chocolate.<br>
+                                          7-Cover each patty with remaining chocolate.<br>
+                                          8-If adding toppings, go ahead and lightly press them into the tops of the peanut butter cups.<br>
+                                          9-Freeze for 30 minutes or refrigerate one hour to set. Store in an airtight container in the refrigerator, and enjoy straight from the fridge.</p>
+                                      <i class="fa fa-heart"  onclick="changeColor(5)" id="heart5"></i></div></div></a>
+
+                   <a href="#" id="pop2" onclick="ccc(2)">   <div class="grid-box" value="sweets">
+                          <img id="imageresource2" src="images/dishes/r2.jpg" class="imgradious">
+                        <div class="info">
+                       <p id="title2">Wild Pumpkin Fudge Cakes</p>
+                       <p id="description2" style="display:none;">
+                          <strong>Ingredients</strong><br>
+                          ½ cup almond flour (or sweet potato flour for nut-free)<br>
+                          ½ cup coconut flour<br>
+                          ½ teaspoon sea salt<br>
+                          1 teaspoon cinnamon<br>
+                          ¼ teaspoon nutmeg<br>
+                          ¼ teaspoon ground clove<br>
+                          ¼ teaspoon pure stevia extract<br>
+                          ½ tsp baking soda<br>
+                          ½ cup (1 stick) butter, room temperature (or coconut oil)<br>
+                          ⅓ cup coconut palm sugar<br>
+                          1 large egg<br>
+                          1 teaspoon vanilla extract<br>
+                          ¾ cup pumpkin puree<br>
+                          ½ teaspoon fresh ginger root, peeled and minced (or use ground ginger)<br>
+                          ¼ cup dark chocolate chips (or dried mulberries for chocolate-free version), plus more for pressing into the tops.<br>
+                        <strong>Instructions</strong><br>
+                          1-Preheat oven to 350°F. Line a muffin pan with liners.<br>
+                          2-In a medium bowl, whisk together almond flour, coconut flour, salt, spices, stevia, and baking soda. Set aside.<br>
+                          3-With an electric mixer, cream butter and coconut sugar until smooth. Beat in egg, vanilla, pumpkin puree, and minced ginger (mixture may look curdled).<br>
+                          4-Mix in dry ingredient.<br>
+                          5-Fold in chocolate chips, and scoop batter into muffin liners. Press additional chocolate chips into the tops (optional).<br>
+                          6-Bake for 20-25 minutes, until a toothpick inserted into the middle comes out clean.<br>
+                          7-Enjoy<br></p>
+                          <i class="fa fa-heart"  onclick="changeColor(2)" id="heart2"></i></div></div></a>
+                   <a href="#" id="pop3" onclick="ccc(3)">    <div class="grid-box" value="sweets"> 
+                              <img  id="imageresource3"  src="images/dishes/r3.jpg" class="imgradious"> 
+                                  <div class="info">
+                              <p id="title3">How to Make Paleo Pumpkin Bread</p>
+                              <p id="description3" style="display:none;">
+                                  <strong>Ingredients</strong> <br>
+                                  ¼ cup coconut oil, melted, plus more for the pan<br>
+                                  1 ½ cups almond flour<br>
+                                  ¼ cup coconut flour<br>
+                                  ¼ cup flaxseed meal<br>
+                                  ½ teaspoon sea salt<br>
+                                  1 teaspoon baking soda<br>
+                                  2 tablespoons ground cinnamon<br>
+                                  2 teaspoons ground nutmeg<br>
+                                  ½ teaspoon ground cloves<br>
+                                  ½ teaspoon ground ginger<br>
+                                  ¾ teaspoon pure stevia extract, or to taste<br>
+                                  1 cup organic pumpkin puree<br>
+                                  1 teaspoon pure vanilla extract<br>
+                                  4 Medjool dates, pitted<br>
+                                  6 large eggs<br>
+                                  1 teaspoon freshly squeezed lemon juice<br>
+                                <strong>Toppings</strong><br>
+                                  2 tablespoons salted butter, plus more for serving<br>
+                                  1 tablespoon coconut palm sugar<br>
+                                  1 teaspoon ground cinnamon<br>
+                                <strong>Instructions</strong><br>
+                                  1-Preheat the oven to 350°F. Grease a loaf pan with coconut oil.<br>
+                                  2-In a large bowl, whisk together the almond flour, coconut flour, flaxseed meal, salt, baking soda, cinnamon, nutmeg, cloves, ginger, and stevia. Set aside.<br>
+                                  3-In a blender, combine the pumpkin puree, vanilla, dates, 3 of the eggs, the melted coconut oil, and the lemon juice. Blend until the dates are broken up and well incorporated.<br>
+                                  4-Add the remaining 3 eggs and blend until smooth.<br>
+                                  5-Add the pumpkin mixture to the flour mixture and stir until well combined.<br>
+                                  6-Pour the batter into the prepared loaf pan and bake until a toothpick inserted into the center comes out clean, 35 - 45 minutes.<br>
+                                <strong>Toppings</strong><br>
+                                  While the pumpkin bread is in the oven, melt the butter in a small saucepan over low heat. Stir in the coconut palm sugar and cinnamon. Spoon the mixture over the pumpkin bread during the last 15 minutes in the oven.<br>
+                                  Slice and serve with salted grass-fed butter.</p>
+                     <i class="fa fa-heart"  onclick="changeColor(3)" id="heart3"></i></div></div></a>
+                   </div> 
+                <div class="grid-container-one">
+                    <a href="#" id="pop1" onclick="ccc(1)">    <div class="grid-box" value="salts"> 
+                        <img  id="imageresource1"  src="images/dishes/r10.jpg" class="imgradious"> 
+                                     <div class="info">
+                                        <p id="title1">Spinach, Cheese & Bacon Egg Muffins</p>
+                                        <p id="description1" style="display:none;">
+                                            <strong>Ingredients</strong><br>
+                                            6 strips of bacon, chopped<br>
+                                            1 12-ounce bag frozen chopped spinach, thawed<br>
+                                            9 large eggs<br>
+                                            1 red bell pepper, diced<br>
+                                            2 - 3 ounces soft goat cheese, crumbled (optional)<br>
+                                            1 tablespoon grass-fed butter or other fat, for greasing<br>
+                                            Sea salt and black pepper<br>
+                                          <strong>Instructions</strong><br>
+                                            1-Chop bacon into small pieces and cook in a skillet set over medium heat, stirring regularly, until crisp, about 5 - 7 minutes. Scoop onto a paper-towel lined plate to drain.<br>
+                                            2-Preheat oven to 350℉. Grease a standard 1-dozen muffin tin with bacon grease. Set aside.<br>
+                                            3-Place the thawed spinach in a fine mesh sieve set over the sink. Press with the back of a wooden spoon to press out as much water as possible.<br>
+                                            4-Crack the eggs into a large mixing bowl and whisk until smooth. Stir in the spinach, diced bell pepper, half of the goat cheese (if using) and half of the bacon.<br>
+                                            5-Spoon the egg mixture evenly into the greased muffin cups. Top with remaining goat cheese and bacon.<br>
+                                            6-Bake 15 - 18 minutes, or until the egg-muffins are fluffy and set in the center. Serve immediately or cover and refrigerate leftovers for up to 3 days.<br>
+                                          </p>
+                                        <i class="fa fa-heart"  onclick="changeColor(1)" id="heart1"></i></div></div></a>
+                      
+                       <a href="#" id="pop7" onclick="ccc(7)">    <div class="grid-box" value="salts"> 
+                                  <img  id="imageresource7"  src="images/dishes/r11.jpg" class="imgradious"> 
+                                      <div class="info">
+                                  <p id="title7">Bacon, Egg & Avocado Sandwich</p>
+                                  <p id="description7" style="display:none;">
+                                      <strong>Ingredients</strong><br>
+                                      6 eggs<br>
+                                      2 green plantains<br>
+                                      4 strips of nitrite/nitrate-free bacon<br>
+                                      4 slices of grass-fed cheddar cheese (optional)<br>
+                                      4 leaves Bibb lettuce or other lettuce<br>
+                                      1 avocado, pitted and sliced<br>
+                                      hot sauce (optional)<br>
+                                      1 grapefruit, sliced (optional side)<br>
+                                      Sea salt, to taste<br>
+                                    <strong>Instructions</strong><br>
+                                      Blend 2 eggs and 2 green plantains in the blender, until smooth and creamy. Set aside.<br>
+                                      Cook 4 strips of bacon over medium-low, flipping once, until done. Pour bacon fat into a small dish and use as needed for cooking. Set bacon aside on a paper towel-lined plate.<br>
+                                      Cook 4 eggs over easy. Optional: Crack eggs into the ring of a mason jar lid to cook eggs into circular patty. If using cheese, add a slice of cheese the tops of the eggs, after flipping. Set aside with bacon.<br>
+                                      Add a bit of bacon grease or other fat to the skillet, and ladle plantain-egg batter into the pan into 4 pancakes. Cook until the top starts to bubble and dry out and underside is lightly brown. Flip and continue to cook, until done. Repeat to make 4 more pancakes.<br>
+                                      Sprinkle the tops of the pancakes with sea salt.<br>
+                                      Add pancake buns to serving plates and top with lettuce, egg, bacon, avocado slices and a dash of hot sauce (if using). Top with remaining pancake buns.<br>
+                                      Serve with a side of sliced grapefruit.</p>
+                         <i class="fa fa-heart"  onclick="changeColor(7)" id="heart7"></i></div></div></a>
+                         <a href="#" id="pop11" onclick="ccc(11)">    <div class="grid-box" value="salts"> 
+                            <img  id="imageresource11"  src="images/dishes/r12.jpg" class="imgradious"> 
+                                <div class="info">
+                            <p id="title11">Shrimp Scampi with Zoodles</p>
+                            <p id="description11" style="display:none;">
+                              <strong>Ingredients</strong><br>
+                                1 pound large wild caught shrimp (peeled and deveined)<br>
+                                Salt and pepper, to taste<br>
+                                2 tablespoons ghee (or grass-fed butter)<br>
+                                2 large cloves garlic, minced<br>
+                                ¼ cup dry white wine<br>
+                                1 tablespoon fresh lemon juice<br>
+                                ¼ - ½ teaspoon lemon zest<br>
+                                ¼ cup flat-leaf parsley, chopped<br>
+                                1 - 2 zucchinis, spiral cut into zoodles (use a spiral vegetable peeler, julienne peeler, or vegetable peeler)<br>
+                                ¼ teaspoon crushed red pepper flakes<br>
+                                hot sauce, optional<br>
+                              <strong>Instructions</strong><br>
+                                If frozen, take 1 pound of shrimp out of the freezer and submerge in a bowl of cold water for 10 minutes. Change the water in the bowl, again using cold water, re-submerge the shrimp. Leave for another 10 to 20 minutes and the shrimp should be completely defrosted.<br>
+                                Pat shrimp dry, and salt and pepper to taste.<br>
+                                Heat the ghee (or butter) in a large skillet set over medium-high heat. Cook until the ghee starts to pop a little, then turn down the heat to medium. Add the shrimp and minced garlic and cook about two minutes on each side. The shrimp will turn from gray to pink.<br>
+                                Spoon the shrimp to a bowl reserving any leftover garlic and ghee in the skillet.<br>
+                                Add the white wine, lemon juice and lemon zest to the pan and bring to simmer. Cook, stirring regularly, until the sauce reduces by about half, about 2 – 4 minutes. Stir in the chopped parsley and cook one more minute.<br>
+                                Pour the sauce over the shrimp and toss.<br>
+                                Return the pan to the burner and turn heat to low. Toss in the zoodles (add olive oil, if needed) and cook, stirring regularly, until just warmed but still crisp, about 2 minutes.<br>
+                                Toss the zoodles into the shrimp, top with a bit of red pepper flakes and/or hot sauce (optional), and serve warm.<br>
+                            </p>
+                   <i class="fa fa-heart"  onclick="changeColor(11)" id="heart11"></i></div></div></a>
+                
+                    </div> 
+               
+        </section>
+        
+        <section class="boxmore1">  <!-- more recipes -->
+          <div class="grid-container-one">
+            <a href="#" id="pop9" onclick="ccc(9)">    <div class="grid-box" value="sweets"> 
+                <img  id="imageresource9"  src="images/dishes/r4.jpg" class="imgradious"> 
+                             <div class="info">
+                                <p id="title9">Creamy Chocolate Pudding</p>
+                                <p id="description9" style="display:none;">
+                                    <strong>Ingredients</strong><br>
+                                    4 ripe avocados (organic), peeled and pitted<br>
+                                    ¾ cup organic cacao powder<br>
+                                    ¼ - ½ cup maple syrup, to taste<br>
+                                    1 cup full-fat, unsweetened canned coconut milk<br>
+                                    2 teaspoons pure vanilla extract<br>
+                                    ¼ teaspoon sea salt<br>
+                                    dash of stevia, to taste<br>
+                                  <strong>Instructions</strong><br>
+                                    1-Add all ingredients to the blender. Blend smooth.<br>
+                                    2-Taste and add a bit more stevia, if needed, to reach desired sweetness.<br>
+                                    3-Refrigerate until chilled. Enjoy.</p>
+                                <i class="fa fa-heart"  onclick="changeColor(9)" id="heart9"></i></div></div></a>
+                 <a href="#" id="pop10" onclick="ccc(10)">   <div class="grid-box" value="sweets">
+                        <img id="imageresource10" src="images/dishes/r5.jpg" class="imgradious">
+                      <div class="info">
+                     <p id="title10">Strawberry Mini Cheesecake</p>
+                     <p id="description10" style="display:none;">
+                        <strong>Ingredients</strong><br>
+                        <strong>Crust</strong><br>
+                        2 cups blanched almond meal or almond ﬂour<br>
+                        2 tablespoons salted grass-fed butter or coconut oil, softened<br>
+                        1 teaspoon raw honey, melted<br>
+                      <strong>Filling</strong><br>
+                        2 pounds organic cream cheese (four 8-ounce packages)<br>
+                        ½ cup raw honey<br>
+                        3 large eggs<br>
+                        2 tablespoons grass-fed heavy whipping cream<br>
+                        2 tablespoons lemon juice<br>
+                        1 teaspoon vanilla extract<br>
+                      <strong>Instructions</strong><br>
+                    <strong>Crust</strong><br>
+                       1- Wrap foil tightly around the bottom and up the sides of 4 4-inch (or one 9-10”) springform pans. Cut circles of parchment paper and ft them neatly into the bottom of pans.<br>
+                       2-In a small bowl, mix together the almond meal, butter, and honey until a loose dough ball forms.<br>
+                       3-Press equal portions of crust mixture into the bottom of the prepared pans. Set aside.<br>
+                      <strong>Filling</strong><br>
+                        1-Preheat oven to 350˚F. Start a pot of water boiling.<br>
+                        2-Using your kitchen mixer, beat together the cream cheese and honey until light and ﬂuﬀy. About 2 minutes.<br>
+                        3-Add the lemon juice, heavy whipping cream, and vanilla. Beat until creamed and consistent.<br>
+                        4-Beat the eggs in one at a time. Continue beating until light and ﬂuﬀy. About two minutes.<br>
+                        5-Distribute the flling evenly into each prepared pan.<br>
+                        6-Set the pans into the bottom of a casserole dish.<br>
+                        7-Fill the dish half-way up the pans with boiling water. Carefully place the casserole dish into the oven, being careful not to get water into the pans.<br>
+                        8-Bake for 1 hour, or until the flling is sof-set. Crack the oven door, turn oﬀ heat, and allow the cheesecake to slowly cool in the oven for at least 1 hour. Cover and chill until ready to serve. Refrigerate up to three days.<br>
+                        9-Remove each individual cheesecake from its pan and set it on a dessert plate. Top with fresh berries, cherry sauce, or drizzle with melted chocolate.<br>
+                    </p>
+                         <i class="fa fa-heart"  onclick="changeColor(10)" id="heart10"></i></div></div></a>
+                         <a href="#" id="pop13" onclick="ccc(13)">    <div class="grid-box" value="sweets"> 
+                            <img  id="imageresource13"  src="images/dishes/r6.jpg" class="imgradious"> 
+                                         <div class="info">
+                                            <p id="title13">Ice Cream</p>
+                                            <p id="description13" style="display:none;">
+                                                <strong>Ingredients</strong><br>
+                                                4 (16-ounce) cans full-fat, unsweetened coconut milk (organic)<br>
+                                                8 medjool dates, pitted (organic)<br>
+                                                2 teaspoons peppermint extract<br>
+                                                2 teaspoons vanilla extract<br>
+                                                1 teaspoon sea salt<br>
+                                                ¼ - ½ teaspoon organic 100% stevia extract, to taste<br>
+                                                ¾ cup organic dark chocolate chips<br>
+                                                ¾ cup organic macadamia nuts<br>
+                                              <strong>Instructions</strong><br>
+                                                1-Add coconut milk, dates, peppermint, vanilla, salt and stevia to the blender, and blend on high until dates are well incorporated and the mixture is smooth.<br>
+                                                2-Taste mixture, and add a small amount of stevia, if needed, to reach desired sweetness.<br>
+                                                3-Add half of the chocolate chips and half the macadamia nuts and blend until they’re broken into small pieces.<br>
+                                                4-Add the remaining chocolate chips and macadamia nuts and stir.<br>
+                                                5-Transfer mixture to your ice cream maker and churn according to the manufacturer’s instructions.<br>
+                                                6-Serve immediately or freeze in an airtight container (after freezing, let sit at room temperature for 10 minutes before enjoying).<br>
+                                                </p>
+                                            <i class="fa fa-heart"  onclick="changeColor(13)" id="heart13"></i></div></div></a>     
+                 
+                   </div> 
+              <div class="grid-container-one">
+                <a href="#" id="pop21" onclick="ccc(21)">    <div class="grid-box" value="salts"> 
+                    <img  id="imageresource21"  src="images/dishes/r13.jpg" class="imgradious"> 
+                                 <div class="info">
+                                    <p id="title21">Wild Carne Asada Bowl</p>
+                                    <p id="description21" style="display:none;">
+                                        <strong>Ingredients</strong><br>
+                                        2 pounds skirt steak<br>
+                                        3 whole dried ancho chiles, stems and seeds removed<br>
+                                        3 whole fresh jalapeno chilies, stems and seeds removed<br>
+                                        2 whole chipotle peppers, stems and seeds removed<br>
+                                        Juice of one orange<br>
+                                        Juice of two limes<br>
+                                        2 tablespoons extra-virgin olive oil<br>
+                                        2 tablespoons liquid coconut aminos<br>
+                                        2 tablespoons gluten-free fish sauce<br>
+                                        5 large cloves garlic, crushed<br>
+                                        1 cup fresh cilantro leaves, chopped (plus 2 tablespoons for Easy Guacamole)<br>
+                                        1 ½ teaspoons ground cumin<br>
+                                        ½ teaspoon ground coriander<br>
+                                        1 tablespoon pure maple syrup or honey<br>
+                                        Sea salt to taste<br>
+                                      <strong>For the bowl:</strong><br>
+                                        1 cup prepared black beans* (optional – ingredients: 1 cup dried black beans, ¼ cup apple cider vinegar, filtered water)<br>
+                                        1 large head red or green leaf lettuce, coarsely chopped<br>
+                                        1 pint cherry tomatoes, halved<br>
+                                        ½ red onion, sliced thin (raw or grilled)<br>
+                                        1 cup Easy Guacamole* (ingredients: 2 avocados, 1 tablespoon freshly squeezed lime juice, 2 tablespoons chopped cilantro, ½ teaspoon sea salt)<br>
+                                        Remaining marinade (salsa)</p>
+                                    <i class="fa fa-heart"  onclick="changeColor(21)" id="heart21"></i></div></div></a>
+                     <a href="#" id="pop22" onclick="ccc(22)">   <div class="grid-box" value="salts">
+                            <img id="imageresource22" src="images/dishes/r14.jpg" class="imgradious">
+                          <div class="info">
+                         <p id="title22">Wild Cowboy Burgers</p>
+                         <p id="description22" style="display:none;">
+                          <strong>Ingredients</strong><br>
+                        <strong>Burgers</strong><br>
+                            1 pound 85% lean grass-fed ground bison or beef<br>
+                            4 slices nitrate-free bacon, cut into ½-inch pieces<br>
+                            ¼ cup grass-fed cheddar cheese, coarsely shredded<br>
+                            ¼ cup red onion, finely chopped<br>
+                            ¼ cup fresh cilantro, chopped<br>
+                            ¼ cup pickled jalapeno, chopped<br>
+                            2 garlic cloves, minced<br>
+                            ½ teaspoon red chili pepper flakes<br>
+                            ½ teaspoon pepper<br>
+                            ½ teaspoon salt<br>
+                          <strong>Topping</strong><br>
+                            4 slices bacon (pasture-raised & nitrate/nitrite-free)<br>
+                            1 yellow onion, peeled and sliced<br>
+                            1 avocado, sliced<br>
+                            4 slices grass-fed cheddar cheese<br>
+                            4 fried eggs (optional)<br>
+                            Sweet Potato Buns (optional)<br>
+                            1 organic sweet potato (try to get a fatter sweet potato instead of a long skinny one)<br>
+                            2-4 tablespoons grass-fed butter or ghee, melted<br>
+                            Salt and pepper<br>
+                          <strong>Instructions</strong><br>
+                            Sweet Potato Buns<br>
+                            If you’re making the sweet potato buns, you’ll want to start these first. Preheat the oven to 375°F and line a baking sheet with foil.<br>
+                            Bring a pot of water to a boil. While water is heating up, thinly slice the sweet potato. A sharp knife or mandolin is useful here. Add sweet potato slices to the boiling water and boil for 5 minutes.<br>
+                            Remove from water and thoroughly pat dry. Dredge each sweet potato slice in melted butter and place in a single layer on the foil lined-baking sheet. You can also place sweet potato slices on the foil-lined baking sheet and pour butter over the slices, flipping to coat. Salt and pepper the tops of the slices.<br>
+                            Bake for 10-20 minutes, depending on thickness, until lightly browned on the underside. Watch closely so they don’t burn. Flip and bake for an additional 10-15 minutes, until lightly golden browned. Again, watch closely and remove when lightly browned.<br>
+                        
+                        </p>
+                             <i class="fa fa-heart"  onclick="changeColor(22)" id="heart22"></i></div></div></a>
+                     <a href="#" id="pop23" onclick="ccc(23)">    <div class="grid-box" value="salts"> 
+                                <img  id="imageresource23"  src="images/dishes/r15.jpg" class="imgradious"> 
+                                    <div class="info">
+                                <p id="title23">
+                                    Maple Bacon Duck Burgers </p>
+                                <p id="description23" style="display:none;">
+                                    <strong>Ingredients</strong><br>
+                                    1 pound pasture-raised ground duck<br>
+                                    2 slices nitrate-/nitrite-free bacon<br>
+                                    ½ tablespoon 100% pure maple syrup<br>
+                                    1 tablespoon Braggs liquid aminos (or coconut aminos)<br>
+                                    1 teaspoon ground black pepper<br>
+                                    1 tablespoon grass-fed ghee (or other cooking fat)<br>
+                                    ½ purple onion, thinly sliced<br>
+                                    4 slices grass-fed pepper jack cheese (optional)<br>
+                                    4 thick slices organic tomato<br>
+                                    Organic arugula and mustard for serving<br>
+                                  <strong>Instructions</strong><br>
+                                    Finely chop 2 slices of bacon and add to a bowl with ground duck, ½ tablespoon maple syrup, 1 tablespoon liquid aminos, and 1 teaspoon black pepper. Mix with hands until well combined, and form into 4 patties.<br>
+                                    Melt 1 tablespoon ghee in a skillet over medium. Add sliced onions and saute. Set aside.<br>
+                                    Add burgers to the skillet and cook until browned, about 3 minutes. Flip. If using pepper jack cheese, add a slice to each burger. Cook until done, about 3-4 more minutes.<br>
+                                    Add arugula and a thick slice of tomato to each serving plate. Top with a duck patty, grilled onions, and serve with mustard.</p>
+                       <i class="fa fa-heart"  onclick="changeColor(23)" id="heart23"></i></div></div></a>
+                  </div>     
+                    
+              </section>
+              <section class="boxmore2">  <!--more recipes-->
+                  <div class="grid-container-one">
+                      <a href="#" id="pop12" onclick="ccc(12)">    <div class="grid-box" value="drinks"> 
+                          <img  id="imageresource12"  src="images/dishes/r7.jpg" class="imgradious"> 
+                            <div class="info">
+                                          <p id="title12"> Strawberry “Milkshake”
+                                              </p>
+                                          <p id="description12" style="display:none;">
+                                              <strong>Ingredients</strong><br>
+                                              8 organic strawberries (fresh or frozen)<br>
+                                              1 tablespoon avocado oil (or olive oil)<br>
+                                              ½ cup beetroot, chopped<br>
+                                              4 large handfuls of organic spinach<br>
+                                              ½ cup full-fat unsweetened canned coconut milk, shaken<br>
+                                              ¼ teaspoon pure vanilla extract<br>
+                                              2 handfuls of ice<br>
+                                              Dash of pure stevia extract, to taste<br>
+                                              Filtered water, to facilitate blending<br>
+                                            <strong>Instructions</strong><br>
+                                              1-Add all the ingredients to the blender, along with enough water to facilitate blending.<br>
+                                              2-Blend until smooth.<br>
+                                              3-Taste, and if needed add a tad more stevia to reach desired sweetness.<br>
+                                              4-Enjoy now, or store in an airtight container in the refrigerator for up to 24 hours.<br>
+                                          
+                                          </p>
+                                          <i class="fa fa-heart"  onclick="changeColor(12)" id="heart12"></i></div></div></a>
+                                           
+                           <a href="#" id="pop14" onclick="ccc(14)">   <div class="grid-box" value="salts">
+                                  <img id="imageresource14" src="images/dishes/r8.jpg" class="imgradious">
+                                <div class="info">
+                               <p id="title14">Homemade Sauerkraut</p>
+                               <p id="description14" style="display:none;">
+                                  <strong>Ingredients</strong><br>
+                                  1 organic head of green cabbage (2 to 3 pounds)<br>
+                                  1 to 2 tablespoons sea salt<br>
+                                  1 large organic carrot, shredded<br>
+                                  1 teaspoon caraway seeds (optional)<br>
+                                <strong>Instructions</strong><br>
+                                  1-Thoroughly clean a wide-mouth mason jar, chopping knife, cutting board, large bowl, and your hands.<br>
+                                  2-Rinse the cabbage and carefully peel off the two outer layers. Lay these two cabbage leaves on top of your jar like a “lid.” Use a knife or clean scissors to cut the cabbage leaves about an inch wider than the jar all around. You’ll use these cabbage leaf rounds to hold the sauerkraut below the brining liquid in a later step.<br>
+                                  3-Quarter the head of cabbage and chop out the thick core from each quarter. Slice each cabbage quarter lengthwise into thin ribbons.<br>
+                                  4-Put each handful of cabbage you cut into a large bowl and sprinkle it with salt. Add salt as you go to help keep the cabbage crisp. In the end, you want to have added between 1 and 2 tablespoons of salt.<br>
+                                  5-Use your hands to massage the cabbage with the salt for 5 to 10 minutes, until it becomes watery and limp.<br>
+                                  6-Add the shredded carrot and caraway seeds to the cabbage and mix with your hands to combine.<br>
+                                  7-Take handfuls of the cabbage mixture and press them into the bottom of the mason jar, packing them tight with each handful so the liquid (created by salting and massaging in step 5) rises to the top over the cabbage.<br>
+                                  8-Take the cabbage rounds you cut in step 2 and press them into the jar so they hold the cabbage under the liquid.<br>
+                                  9-Wipe the jar mouth clean and cover it with a cloth, cheesecloth, or paper towel and secure in place with a rubber band or twine. This allows air into the jar but prevents insects from getting in.<br>
+                                  10-Over the next 24 hours, press down on the cabbage leaves to keep the cabbage packed under the liquid as it ferments and rises. If needed, you can add more brining liquid by mixing filtered water with a bit of salt (1 teaspoon salt dissolved in 1 cup filtered water).<br>
+                                  11-Allow the sauerkraut to ferment at room temperature out of direct sunlight for 3 to 10 days, checking daily to make sure the cabbage is not floating above the liquid. Taste every few days until the desired taste is achieved.<br>
+                                  12-The sauerkraut will keep in the sealed jar in the refrigerator for at least 2 months.<br>
+                              </p>
+                                   <i class="fa fa-heart"  onclick="changeColor(14)" id="heart14"></i></div></div></a>
+                           <a href="#" id="pop15" onclick="ccc(15)">    <div class="grid-box" value="salts"> 
+                                      <img  id="imageresource15"  src="images/dishes/r9.jpg "class="imgradious"> 
+                                          <div class="info">
+                                      <p id="title15">Plantain Pancakes</p>
+                                      <p id="description15" style="display:none;">
+                                          <strong>Ingredients</strong><br>
+                                          2 large green plantains (or slightly yellow*)<br>
+                                          2 large eggs<br>
+                                          1 tablespoon coconut oil, plus more as needed (or grass-fed butter)<br>
+                                          Sea salt<br>
+                                          Grass-fed butter or coconut oil<br>
+                                        <strong>Instructions</strong>
+                                          1-Run a knife up the plantain peel lengthwise, and pry your fingers between the plantain and peel to separate the peel away. Remove and discard peel.<br>
+                                          2-Add 2 plantains and 2 eggs to the blender. Blend smooth, about 1 minute.<br>
+                                          3-Melt a tablespoon of coconut oil in a skillet over medium heat. Add dollops of pancake batter to the skillet, and cook until the top starts to dry and the edges brown, about 2 - 4 minutes. Flip pancakes, and continue to cook until lightly browned with crisp edges.<br>
+                                          4-If needed, add more coconut oil to the skillet between batches.<br>
+                                          5-Top with grass-fed butter or coconut oil, and sprinkle with sea salt. Serve with a side of scrambled eggs, bacon, and a green smoothie.</p>
+                             <i class="fa fa-heart"  onclick="changeColor(15)" id="heart15"></i></div></div></a>
+                             
+                        </div>  
+                    </section>
+                  </div>
+          <div class="load-btn"> <!--load more/less button div -->
+            <button type="button" id="loadMore"   class="btn btn-info"
+            onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button>
+          </div>  
+    
+    
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog"> <!--model to show recipes details-->
+        <div class="modal-content">
+          <div class="modal-header">
+          <h4 class="modal-title" id="titleofitem"></h4>
+          </div>
+          <div class="modal-body">
+            <img src="" id="imagepreview" >
+            <p id="itemdiscription"> </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info btn-lg text-white" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <button class="top"  onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button> 
+   </main>    
+   <!-- Footer started using bootstrap -->      
+<footer class="page-footer font-small mdb-color pt-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left mt-3 pb-3">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold text-info">H2I</h3>
+              <p>We have been providing top quality fitness equipment for years!  
+                We are continually researching new products and vendors to provide the latest 
+                products to our customers.
+                 By working with multiple vendors and various warehouses we are able to quickly 
+                 deliver a larger variation of products to you, in under a week!</p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a href="sportwear.html">Sport Wears</a>
+              </p>
+              <p>
+                <a href="#">Training Machines</a>
+              </p>
+              <p>
+                <a href="#">Proteins</a>
+              </p>
+              <p>
+                <a href="recipes.html">Recipes</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+              <p>
+                <a href="#!">Contact US</a>
+              </p>
+              <p>
+                <a href="#!">Become a partner</a>
+              </p>
+              <p>
+                <a href="#!">Suppliers</a>
+              </p>
+              <p>
+                <a href="#!">Help</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p>
+                <i class="fa fa-home mr-3"></i> Sousse, SO 10012, TN</p>
+              <p>
+                <i class="fa fa-envelope mr-3"></i> h2i.info@gmail.com</p>
+              <p>
+                <i class="fa fa-phone mr-3"></i> + 216 51 759 477</p>
+              <p>
+                <i class="fa fa-print mr-3"></i> + 216 718 60 692 </p>
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Footer links -->
+    
+          <hr>
+    
+          <!-- Grid row -->
+          <div class="row d-flex align-items-center">
+    
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+    
+              <!--Copyright-->
+              <p class="text-center text-md-left">Copyright © 2018  <a href="index.html">
+                  <strong>H2I</strong> 
+                </a> . All rights reserved. 
+              </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+    
+              <!-- Social buttons -->
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+    
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+      
+      <!-- Footer -->
+    </footer>  <!-- Footer ended -->
+</body>  <!-- Body Ended  -->
+</html>

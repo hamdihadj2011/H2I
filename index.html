@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> H2I | Fitness</title> <!--title and importation of bootstrap and js -->
+    <meta charset="UTF-8">
+    <meta name="description" content="H2I|Fitness">
+    <link rel="icon" href="images/logotrans.png" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- import icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/index.js"></script>  <!-- import js file -->
+    <link rel="stylesheet prefetch" href="css/index.css">  <!-- import css file -->
+  </head>
+<body>  <!-- Body statred -->
+
+
+        <header>  <!-- Header started -->
+         <!-- nav bar using bootstrap -->
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+            <a class="navbar-brand" href="index.html"> <!-- animated logo image -->
+                <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
+                <img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
+              </a>
+             
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sportwear.html">Sport Wears</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="equipement.html">Training Machines</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="protein.html">Proteins</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Recipes</a>
+                  </li>
+                  
+              </ul>
+              <div class="search-container">
+                <form action="#">
+                  <input type="text" placeholder="Search.." name="search" id="searchfld">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form> 
+              </div> 
+            <div class="divider"></div>
+            <!--used to space between the search button and the sign button-->
+            <div class="divider"></div> 
+            <!-- Sign Up/Log In that execut a js function to show them in a fliped carte manner  -->
+            <button  class="btn btn-info" onclick="showflipedcart();">Sign Up/Log In</button>
+                <div class="divider"></div>
+             
+            </div>
+          </nav>
+    </header>
+    <main>
+        
+
+      
+        <div id="form-container"> <!--fliped cart div-->
+            <div class="front" id="front"> <!--the front consist of login -->
+              <form>
+                <input type="text" name="username" class="inptxt" placeholder="Username">
+                <input type="password" name="password" class="inpps" placeholder="password">
+                <input type="submit" value="Log In" class="inpsub">
+              </form>
+              <a href="#" class="signin" id="flip" onclick="fliptosignup();" style="color: white;">Click to Create a New Account</a> 
+            </div>
+            <div class="back" id="back">  <!--the back consist of sign up -->
+              <form>
+                <input type="text" name="name" class="inptxt" placeholder="Name">
+                <input type="text" name="username" class="inptxt" placeholder="Username">
+                <input type="password" name="password" class="inpps" placeholder="Password">
+                <input type="submit" value="Sign Up" class="inpsub">
+              </form>
+              <a href="#" fliptologin() id="unflip" style="color: white;">Click to Login to an Existing Account</a>  
+            </div>
+          </div>
+      
+            <img id="islider" name="imagesslider" width="100%"/>  <!--images slider  -->
+            
+            <h3 style="text-align: center; padding-top: 2%; color: #14d99e">New Arrivals</h3>
+                <div class="container-fluid">  <!--carousel of new arrived items manupilated with js -->
+                    <div class="row">
+                      <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                              <div class="MultiCarousel-inner">  <!--items that contain the grid boxes -->
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/clothes/27909.jpg" class="imgradious">
+                                          <p id="arrivals1"></p>
+                                          <div class="info">
+                                             <p>GIRLS TRACKSUIT $42.68</p> 
+                                           </div></div></div>
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/whey5.jpg" class="imgradious">
+                                          <p id="arrivals2"></p>
+                                          <div class="info">
+                                             <p> SMAIT PROTEIN 8.79$</p>
+                                           </div></div></div>
+                                  
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/whey7.jpg" class="imgradious">
+                                          <p id="arrivals3"></p>
+                                          <div class="info">
+                                             <p> LEAN PROTEIN SHAKE 10.79$</p>
+                                           </div></div></div>
+                                          
+                                           <div class="item">
+                                              <div class="grid-box">
+                                                  <img src="images/clothes/SAL2806_200_1.jpg" class="imgradious">
+                                                  <p id="arrivals4"></p>
+                                                  <div class="info">
+                                                     <p>SALOMON RUNNING SHOES   $77,27</p>
+                                                   </div></div></div>
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/clothes/29834.jpg" class="imgradious">
+                                          <p id="arrivals5"></p>
+                                          <div class="info">
+                                             <p> MENS THREADBORNE   $59.76</p>
+                                           </div></div></div>
+                                  
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/whey1.jpg" class="imgradious">
+                                          <p id="arrivals6"></p>
+                                          <div class="info">
+                                             <p> WHEY PROTEIN 11.50$</p>
+                                           </div></div></div>
+                                  
+                                  <div class="item">
+                                      <div class="grid-box">
+                                          <img src="images/whey4.jpg" class="imgradious">
+                                          <p id="arrivals7"></p>
+                                          <div class="info">
+                                             <p> SMAIT PROTEIN 8.79$</p>
+                                           </div></div></div>
+                          
+                                         
+                              </div> <!--two icons to move left and rigth-->
+                              <button class="leftLst"><i class="fa fa-chevron-left"></i></button>
+                              <button class="rightLst"><i class="fa fa-chevron-right"></i></button>
+                          </div>
+                    </div>
+            
+            <div class="we"> <!--a div that contain an image and a motivational citation-->
+              <div class="we1"><img src="images/home-testimonial.jpg"></div>
+              <div class="we2"> <h1> <i class="fa fa-quote-left" style="font-size:48px;color:#1494d9ce"></i>
+                Fitness is not about being better than someone else... It's about being better than you used to be. </h1>
+            </div></div>
+
+            <h3 style="text-align: center; padding-top: 2%; color: #1494d9ec">Brands</h3><!--partnars brands-->
+            <div class="partners">
+              <img src="images/puma.png">
+              <img src="images/adidas.png">
+              <img src="images/on.png">
+              <img src="images/musc.png">
+              <img src="images/nike.png">
+            </div>
+            
+               <div class="wrapper"> <!--white boxes that shoxw what we sell-->
+                  <div class="box1">
+                      <div class="box3">
+                          <div class="link" style="margin-left: 10%;">
+                              <h4>Sport Wears</h4>
+                              <img class="img-dimension" src="images/fs.jpg"><br>
+                              <a href="sportwear.html" target="_blank" style="text-decoration: underline;color:black;">See More</a>
+                            </div>
+                            <div class="link">
+                                <h4>Training Machines</h4>
+                                <img class="img-dimension" src="images/sm.jpg"><br><br><br>
+                                <a href="equipement.html" target="_blank" style="text-decoration: underline;color:black;">See More</a>
+                              </div>
+                            
+                      </div>
+                      <div class="box4">
+                          <div class="link" style="margin-left: 10%;">
+                              <h4>Recipes</h4>
+                              <img class="img-dimension1" src="images/rf.jpg"><br>
+                              <a href="recipes.html" target="_blank" style="text-decoration: underline;color:black;">See More</a>
+                            </div>
+                            <div class="link">
+                                <h4>Proteins</h4>
+                                <img class="img-dimension1"src="images/pf.jpg"><br><br><br>
+                                <a href="protein.html" target="_blank" style="text-decoration: underline;color:black;">See More</a>
+                              </div>
+                      </div>
+                  </div>
+                  <div class="box2">
+                      <h3 class="titlecustemization">TESTIMONIALS</h3>
+                      <div class="btn-bar">
+
+                          <div id="buttons">
+                            <a id="prev" href="#">&lt;</a>
+                            <a id="next" href="#">&gt;</a> 
+                          </div>
+                        </div> 
+                        <div id="slides"> <!--custemrs view about the products as a slider-->
+                            <ul>
+                              <li class="slide">
+                                Lightweight leggings, great stretch, great coverage.
+                                 Love the scaley texture and the great purple color. Highly recommend for lounging, streetwear, 
+                                 and warm climates.<br>
+                                 _Kati
+                              </li>
+                              <li class="slide">
+                                Nice jacket for the price. I've used it a lot more than I expected.
+                                Great weight for layering. Zip-off sleeves are convenient as the day heats up.
+                                I like the abundant pocket space.<br>
+                                _	Denise Derrer
+                              </li>
+                              <li class="slide">
+                                My niece loved this beautiful shirt! 
+                               and it fit perfectly. It has three pockets on the back. 
+                                <br>
+                                _D.Hart
+                              </li>
+                              <li class="slide">
+                                Best ABS workout! I do plank twice a day (morning and evening) and after 3 min.
+                                 my body was shaking. The apps makes this exercise a game so you don't focus on time.
+                                 Highly recommend!
+                                <br>
+                                _Julia Leonova
+                                </li>
+                                <li class="slide">
+                                  Simple to jump right in and incorporate into lifestyle. I travel for work and eating healthy while traveling is a struggle.
+                                   I prepared two meals from this website that I split between lunch and dinner ahead of my trip.<br>
+                                    _Donna C. Weidler
+                                  </li>
+                            </ul>
+                          </div>
+                  </div>
+                </div>
+
+                <div class="coloreddiv"> <!--a colored div for the desgin-->
+                  </div> 
+    </main>  <!--main ends-->
+    <button class="top" onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>  <!--button to get to the top-->
+        <!-- Footer started  -->
+        <!-- Footer using bootstrap -->
+<footer class="page-footer font-small mdb-color pt-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left mt-3 pb-3">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold text-info">H2I</h3>
+              <p>We have been providing top quality fitness equipment for years!  
+                We are continually researching new products and vendors to provide the latest 
+                products to our customers.
+                 By working with multiple vendors and various warehouses we are able to quickly 
+                 deliver a larger variation of products to you, in under a week!</p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a href="sportwear.html">Sport Wears</a>
+              </p>
+              <p>
+                <a href="equipement.html">Training Machines</a>
+              </p>
+              <p>
+                <a href="protein.html">Proteins</a>
+              </p>
+              <p>
+                <a href="recipes.html">Recipes</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+              <p>
+                <a href="#!">Contact US</a>
+              </p>
+              <p>
+                <a href="#!">Become a partner</a>
+              </p>
+              <p>
+                <a href="#!">Suppliers</a>
+              </p>
+              <p>
+                <a href="#!">Help</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p>
+                <i class="fa fa-home mr-3"></i> Sousse, SO 10012, TN</p>
+              <p>
+                <i class="fa fa-envelope mr-3"></i> h2i.info@gmail.com</p>
+              <p>
+                <i class="fa fa-phone mr-3"></i> + 216 51 759 477</p>
+              <p>
+                <i class="fa fa-print mr-3"></i> + 216 718 60 692 </p>
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Footer links -->
+    
+          <hr>
+    
+          <!-- Grid row -->
+          <div class="row d-flex align-items-center">
+    
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+    
+                <!--Copyright-->
+                <p class="text-center text-md-left">Copyright © 2018  <a href="index.html">
+                    <strong>H2I</strong> 
+                  </a> . All rights reserved. 
+                </p>
+      
+              </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+    
+              <!-- Social buttons -->
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+    
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+      
+      <!-- Footer -->
+    </footer>
+
+   
+</body> <!-- body ended  -->
+</html>

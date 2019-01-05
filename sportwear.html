@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    
+    <title> H2I | Sport Wears </title><!--title and importation of bootstrap and js -->
+    <meta charset="UTF-8">
+    <meta name="description" content="H2I|Fitness">
+    <link rel="icon" href="images/logotrans.png" type="image/png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/sportwear.js"></script>  <!-- import js file -->
+    <script src="js/checktwo.js"></script> <!-- import js file -->
+    <link rel="stylesheet prefetch" href="css/sportwear.css"> <!-- import css file -->
+  </head>
+<body>  <!-- Body statred -->
+    <div id="preloader">  <!-- animation while loading the page -->
+        <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
+    </div>
+
+    <header>  
+       <!-- Header started -->
+         <!-- nav bar using bootstrap --> 
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="index.html">
+            <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
+            <img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="sportwear.html">Sport Wears</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="equipement.html">Training Machines</a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="protein.html">Proteins</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Recipes</a>
+                  </li>
+                  
+              </ul>
+              <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search" id="searchfld">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form> 
+              </div> <div class="divider"></div><div class="divider"></div>
+            </div>
+          </nav>
+    </header>
+    <img id="islider" name="imagesslider" width="100%"/> <!--discount images cover -->
+    <main id="refresh">   <!--main started -->  
+      <div class="shop-carte">
+     <button onclick="panieritmes();" class="check" id="myBtn"><i class="fa fa-shopping-cart" ></i>Check Cart</button>
+        </div>
+        <div id="shopping-cart">
+         <h6>Your Carte</h6>
+        <!-- <div id="postioncarte"> <img id="addeditemimage" src="">
+          <div id="addeditemprice"></div>
+          <div class="calcule">
+              <input type="submit" class="w3-btn w3-circle" id="addition" onclick="add()" value="+">
+              <span class="Qte" id="quantity" >1</span>
+              <input type="submit"class="w3-btn w3-circle"  id="soustraction" onclick="soustraction()" value="-">
+          </div>
+          <div><h6 id="item-price" class="price"></h6>
+          </div></div><hr> -->
+        </div>
+      <div class="itemscategories"><!--filter the products into pants,shoes, etc.-->
+            <button class="itemscategoriesbtn" id="all" onclick="choose('all');">All</button>
+            <button class="itemscategoriesbtn" id="sweaters" onclick="choose('sweater');">Sweaters</button>
+            <button class="itemscategoriesbtn" id="shoes" onclick="choose('shoes');">Running Shoes</button>
+            <button class="itemscategoriesbtn" id="pants" onclick="choose('pants');">Pants</button> 
+          </div>
+          
+        <section id="photos">  <!-- the products grid -->
+            <div class="grid-container-one">
+              <a href="#" id="pop5" onclick="ccc(5)">    <div class="grid-box" value="sweater"> 
+                      <img  id="imageresource5"  src="images/clothes/28357.jpg" class="imgradious"> 
+                                   <div class="info">
+                                      <p id="title5">WOMENS JACKET <p id="forsale"></p> $
+                                      <span id="price5">68.29</span> </p>
+                                      <p id="description5" style="display:none;">ELLESSE WOMENS LOMPARD PADDED JACKET - ANTHRACITE<br>PRICE: $68.29</p>
+                                      <i class="fa fa-heart"  onclick="changeColor(5)" id="heart5"></i></div>
+                                      <div class="addtocartebutton">
+                                          <button id="button5" class="add" onclick="addtocarte(5);">Add To Cart</button>
+                                         </div></div></a>
+
+                   <a href="#" id="pop2" onclick="ccc(2)">   <div class="grid-box" value="sweater">
+                          <img id="imageresource2" src="images/clothes/28478.jpg" class="imgradious">
+                        <div class="info">
+                       <p id="title2">NIKE JACKET   $
+                          <span id="price2">55.69</span></p>
+                       <p id="description2" style="display:none;">NIKE BOYS NSW HOODED FLEECE LINED JACKET - BLACK
+                        <br>PRICE: $55.69 <br> FIT FOR COLD-WEATHER ADVENTURES.
+                        Boys' Nike Sportswear Jacket is at its best when the weather's at its worst. It's made from water-repellent 
+                        ripstop fabric lined with soft, warm fleece, with a lined hood for when conditions call for extra coverage. </p>
+                           <i class="fa fa-heart"  onclick="changeColor(2)" id="heart2"></i></div>
+                           <div class="addtocartebutton">
+                              <button id="button2" class="add" onclick="addtocarte(2);">Add To Cart</button>
+                             </div>
+                            </div></a>
+                   <a href="#" id="pop3" onclick="ccc(3)">    <div class="grid-box" value="sweater"> 
+                              <img  id="imageresource3"  src="images/clothes/26109.png" class="imgradious"> 
+                              <p id="discount8"></p>
+                                  <div class="info">
+                              <p id="title3">ADIDAS TOP   $  <span id="price3">16.26</span></p>
+                              <p id="description3" style="display:none;">ADIDAS TIRO15 TRG TOP - NAVY <br>PRICE: $16.26</p>
+                     <i class="fa fa-heart"  onclick="changeColor(3)" id="heart3"></i></div>
+                     <div class="addtocartebutton">
+                        <button id="button3" class="add" onclick="addtocarte(3);">Add To Cart</button>
+                       </div>
+                      </div></a>
+                     <a href="#" id="pop4" onclick="ccc(4)">    <div class="grid-box" value="sweater"> 
+                        <img  id="imageresource4"  src="images/clothes/29834.jpg" class="imgradious"> 
+                        <p id="discount1"></p>
+                          <div class="info">
+                                        <p id="title4">MENS THREADBORNE   $ <span id="price4">59.76</span></p>
+                                        <p id="description4" style="display:none;">UNDER ARMOUR MENS THREADBORNE FLEECE 1/2ZIP HOODIE - GREY <br>PRICE:  $59.76</p>
+                                        <i class="fa fa-heart"  onclick="changeColor(4)" id="heart4"></i></div>
+                                        <div class="addtocartebutton">
+                                            <button id="button4" class="add" onclick="addtocarte(4);">Add To Cart</button>
+                                           </div></div></a>
+                </div> 
+                <div class="grid-container-one">
+                    <a href="#" id="pop1" onclick="ccc(1)">    <div class="grid-box" value="pants"> 
+                        <img  id="imageresource1"  src="images/clothes/29563.jpg" class="imgradious"> 
+                                     <div class="info">
+                                        <p id="title1">ADIDAS CONDIVO    $<span id="price1">21.34</span></p>
+                                        <p id="description1" style="display:none;">ADIDAS CONDIVO 16 SKINNY TRAINING PANTS YOUTH - BLACK
+                                        <br>PRICE: $21.34</p>
+                                        <i class="fa fa-heart"  onclick="changeColor(1)" id="heart1"></i></div>
+                                        <div class="addtocartebutton">
+                                            <button id="button1" class="add" onclick="addtocarte(1);">Add To Cart</button>
+                                           </div></div></a>
+                      
+                       <a href="#" id="pop7" onclick="ccc(7)">    <div class="grid-box" value="pants"> 
+                                  <img  id="imageresource7"  src="images/clothes/23760.jpg" class="imgradious"> 
+                                  <p id="discount10"></p>
+                                      <div class="info">
+                                  <p id="title7">GIRLS TIGHTS   $ <span id="price7">23.17</span></p>
+                                  <p id="description7" style="display:none;">NIKE GIRLS PRO COOL TIGHTS - BLACK<br>PRICE: $23.17</p>
+                         <i class="fa fa-heart"  onclick="changeColor(7)" id="heart7"></i></div>
+                         <div class="addtocartebutton">
+                            <button id="button7" class="add" onclick="addtocarte(7);">Add To Cart</button>
+                           </div></div></a>
+                         <a href="#" id="pop11" onclick="ccc(11)">    <div class="grid-box" value="pants"> 
+                            <img  id="imageresource11"  src="images/clothes/26678.jpg" class="imgradious"> 
+                                <div class="info">
+                            <p id="title11">ADIDAS GIRLS TIGHTS   $ <span id="price11">20.73</span></p>
+                            <p id="description11" style="display:none;">ADIDAS GIRLS GEAR UP 3S TIGHTS - BLACK/WHITE<br>PRICE: $20.73</p>
+                   <i class="fa fa-heart"  onclick="changeColor(11)" id="heart11"></i></div>
+                   <div class="addtocartebutton">
+                      <button id="button11" class="add" onclick="addtocarte(11);">Add To Cart</button>
+                     </div></div></a>
+                   <a href="#" id="pop16" onclick="ccc(16)">    <div class="grid-box" value="pants"> 
+                      <img  id="imageresource16"  src="images/clothes/18973.jpg" class="imgradious"> 
+                        <div class="info">
+                                      <p id="title16">ADIDAS PANT   $ <span id="price16"> 22.76</span></p>
+                                      <p id="description16" style="display:none;">ADIDAS ESS STANFORD OH PANT - BLACK<br>PRICE: $22.76</p>
+                                      <i class="fa fa-heart"  onclick="changeColor(16)" id="heart16"></i></div>
+                                      <div class="addtocartebutton">
+                                          <button id="button16" class="add" onclick="addtocarte(16);">Add To Cart</button>
+                                         </div></div></a>
+
+                    </div> 
+               
+        </section>
+        
+        <section class="boxmore1"><!-- more products -->
+          <div class="grid-container-one">
+            <a href="#" id="pop9" onclick="ccc(9)">    <div class="grid-box" value="sweater"> 
+                <img  id="imageresource9"  src="images/clothes/27909.jpg" class="imgradious"> <p id="discount2"></p>
+                             <div class="info">
+                                <p id="title9">GIRLS TRACKSUIT $ <span id="price9">42.68</span></p>
+                                <p id="description9" style="display:none;">ADIDAS LITTLE GIRLS KNIT TRACKSUIT - PINK/BLACK/WHITE<br>PRICE:  $42.68</p>
+                                <i class="fa fa-heart"  onclick="changeColor(9)" id="heart9"></i></div>
+                                <div class="addtocartebutton">
+                                    <button id="button9" class="add" onclick="addtocarte(9);">Add To Cart</button>
+                                   </div>
+                                  </div></a>
+                 <a href="#" id="pop10" onclick="ccc(10)">   <div class="grid-box" value="sweater">
+                        <img id="imageresource10" src="images/clothes/29600.jpg" class="imgradious">
+                      <div class="info">
+                     <p id="title10">ADIDAS TOP   $<span id="price10">23.17</span></p>
+                     <p id="description10" style="display:none;">ADIDAS SERENO14 TRG TOP - RED<br>PRICE: $23.17</p>
+                         <i class="fa fa-heart"  onclick="changeColor(10)" id="heart10"></i></div>
+                         <div class="addtocartebutton">
+                            <button id="button10" class="add" onclick="addtocarte(10);">Add To Cart</button>
+                           </div>
+                          </div></a>
+                         
+                 
+                   <a href="#" id="pop12" onclick="ccc(12)">    <div class="grid-box" value="sweater"> 
+                      <img  id="imageresource12"  src="images/clothes/25968.jpg" class="imgradious"> 
+                      <p id="discount9"></p>
+                        <div class="info">
+                                      <p id="title12">ADIDAS WOMENS TRACKSUIT   $<span id="price12">51.22</span></p>
+                                      <p id="description12" style="display:none;">ADIDAS WOMENS BACK2BASICS 3S TRACKSUIT - NAVY/WHITE/NAVY<br>PRICE: $51.22</p>
+                                      <i class="fa fa-heart"  onclick="changeColor(12)" id="heart12"></i></div>
+                                      <div class="addtocartebutton">
+                                          <button id="button12" class="add" onclick="addtocarte(12);">Add To Cart</button>
+                                         </div></div></a>
+                     <a href="#" id="pop8" onclick="ccc(8)">    <div class="grid-box" value="sweater"> 
+                                          <img  id="imageresource8"  src="images/clothes/28670.jpg" class="imgradious"> 
+                                            <div class="info">
+                                                          <p id="title8">ONEILLS DONEGA TOP  $<span id="price8">22.76</span></p>
+                                                          <p id="description8" style="display:none;">ONEILLS DONEGAL GAA SLANEY HZ SQUAD TOP - MARLNVY/EMER/AMB<br>PRICE: $22.76</p>
+                                                          <i class="fa fa-heart"  onclick="changeColor(8)" id="heart8"></i></div>
+                                                          <div class="addtocartebutton">
+                                                              <button id="button8" class="add" onclick="addtocarte(8);">Add To Cart</button>
+                                                             </div></div></a>
+                                    </div> 
+              <div class="grid-container-one">
+                <a href="#" id="pop21" onclick="ccc(21)">    <div class="grid-box" value="shoes"> 
+                    <img  id="imageresource21"  src="images/clothes/SAL3154_200_1.jpg" class="imgradious"> 
+                                 <div class="info">
+                                    <p id="title21">SALOMON RUNNING SHOES   <span id="price21">$111,99</span></p>
+                                    <p id="description21" style="display:none;">SALOMON SPEEDCROSS VARIO 2 GORE-TEX TRAIL RUNNING SHOES - AW18<br>PRICE: $111,99</p>
+                                    <i class="fa fa-heart"  onclick="changeColor(21)" id="heart21"></i></div>
+                                    <div class="addtocartebutton">
+                                        <button id="button21" class="add" onclick="addtocarte(21);">Add To Cart</button>
+                                       </div></div></a>
+                     <a href="#" id="pop22" onclick="ccc(22)">   <div class="grid-box" value="shoes">
+                            <img id="imageresource22" src="images/clothes/SAL2150_200_1.jpg" class="imgradious">
+                          <div class="info">
+                         <p id="title22">SALOMON WOMEN'S RUNNING SHOES   $<span id="price22">125,43</span></p>
+                         <p id="description22" style="display:none;">SALOMON XA PRO 3D GORE-TEX WOMEN'S TRAIL RUNNING SHOES - AW18<br>PRICE: $125,43</p>
+                             <i class="fa fa-heart"  onclick="changeColor(22)" id="heart22"></i></div>
+                             <div class="addtocartebutton">
+                                <button id="button22" class="add" onclick="addtocarte(22);">Add To Cart</button>
+                               </div></div></a>
+                     <a href="#" id="pop23" onclick="ccc(23)">    <div class="grid-box" value="shoes"> 
+                                <img  id="imageresource23"  src="images/clothes/SAL3161_200_1.jpg" class="imgradious"> 
+                                    <div class="info">
+                                <p id="title23">SALOMON RUNNING SHOES   €<span id="price23">94,07</span></p>
+                                <p id="description23" style="display:none;">SALOMON SPEEDCROSS VARIO 2 TRAIL RUNNING SHOES - AW18
+                                  <br>PRICE: €94,07</p>
+                       <i class="fa fa-heart"  onclick="changeColor(23)" id="heart23"></i></div>
+                       <div class="addtocartebutton">
+                          <button id="button23" class="add" onclick="addtocarte(23);">Add To Cart</button>
+                         </div></div></a>
+                       <a href="#" id="pop24" onclick="ccc(24)">    <div class="grid-box" value="shoes"> 
+                          <img  id="imageresource24"  src="images/clothes/SAL3152_200_1.jpg" class="imgradious"> 
+                            <div class="info">
+                                          <p id="title24">SALOMON RUNNING SHOES $ <span id="price24">103,03</span></p>
+                                          <p id="description24" style="display:none;">SALOMON XA PRO 3D TRAIL RUNNING SHOES - AW18<br>PRICE:
+                                            $103,03</p>
+                                          <i class="fa fa-heart"  onclick="changeColor(24)" id="heart24"></i></div>
+                                          <div class="addtocartebutton">
+                                              <button  id="button24" class="add" onclick="addtocarte(24);">Add To Cart</button>
+                                             </div></div></a>
+                  </div>     
+                    
+              </section>
+              <section class="boxmore2"> <!-- more products -->
+                  <div class="grid-container-one">
+                      <a href="#" id="pop13" onclick="ccc(13)">    <div class="grid-box" value="sweater"> 
+                          <img  id="imageresource13"  src="images/clothes/24934-1.jpg" class="imgradious"> 
+                                       <div class="info">
+                                          <p id="title13">ADIDAS TRAINING TOP   <span id="price13">$27.24</span></p>
+                                          <p id="description13" style="display:none;">ADIDAS MI TEAM 14 TRAINING TOP - ADULT - GREEN/GREEN/WHITE<br>PRICE: $27.24</p>
+                                          <i class="fa fa-heart"  onclick="changeColor(13)" id="heart13"></i></div>
+                                          <div class="addtocartebutton">
+                                              <button  id="button13" class="add" onclick="addtocarte(13);">Add To Cart</button>
+                                             </div></div></a>
+                           <a href="#" id="pop14" onclick="ccc(14)">   <div class="grid-box" value="sweater">
+                                  <img id="imageresource14" src="images/clothes/28531.jpg" class="imgradious">
+                                <div class="info">
+                               <p id="title14">NIKE GIRLS HOODIE   $<span id="price14">30.89</span></p>
+                               <p id="description14" style="display:none;">NIKE GIRLS THERMA HOODIE PO GFX - PINK<br>PRICE: $30.89</p>
+                                   <i class="fa fa-heart"  onclick="changeColor(14)" id="heart14"></i></div>
+                                   <div class="addtocartebutton">
+                                      <button id="button14" class="add" onclick="addtocarte(14);">Add To Cart</button>
+                                     </div></div></a>
+                           <a href="#" id="pop15" onclick="ccc(15)">    <div class="grid-box" value="sweater"> 
+                                      <img  id="imageresource15"  src="images/clothes/29783.jpg" class="imgradious"> 
+                                          <div class="info">
+                                      <p id="title15">NIKE WOMENS HOODIE   €<span id="price15">55.69</span></p>
+                                      <p id="description15" style="display:none;">NIKE WOMENS DRY ELEMENT HOODIE - NAVY MARL<br>PRICE: €55.69</p>
+                             <i class="fa fa-heart"  onclick="changeColor(15)" id="heart15"></i></div>
+                             <div class="addtocartebutton">
+                                <button id="button15" class="add" onclick="addtocarte(15);">Add To Cart</button>
+                               </div></div></a>
+                             <a href="#" id="pop6" onclick="ccc(6)">   <div class="grid-box" value="sweater">
+                                <img id="imageresource6" src="images/clothes/25052-1.jpg" class="imgradious">
+                              <div class="info">
+                             <p id="title6">ADIDAS TOP   $<span id="price6">27.24</span></p>
+                             <p id="description6" style="display:none;">ADIDAS MI TEAM 14 TRAINING TOP - ADULT - GOLD/BLACK/GOLD FROM<br> PRICE: $27.24</p>
+                                 <i class="fa fa-heart"  onclick="changeColor(6)" id="heart6"></i></div>
+                                 <div class="addtocartebutton">
+                                    <button id="button6" class="add" onclick="addtocarte(6);">Add To Cart</button>
+                                   </div></div></a>
+                        </div>  
+                <div class="grid-container-one">
+                  <a href="#" id="pop17" onclick="ccc(17)">    <div class="grid-box" value="shoes"> 
+                      <img  id="imageresource17"  src="images/clothes/SAL2198_200_1.jpg" class="imgradious"> 
+                                   <div class="info">
+                                      <p id="title17">SALOMON RUNNING SHOES   $<span id="price17">77,27</span></p>
+                                      <p id="description17" style="display:none;">SALOMON SPEEDCROSS 4 TRAIL RUNNING SHOES<br>PRICE:
+                                        $77,27</p>
+                                      <i class="fa fa-heart"  onclick="changeColor(17)" id="heart17"></i></div>
+                                      <div class="addtocartebutton">
+                                          <button id="button17" class="add" onclick="addtocarte(17);">Add To Cart</button>
+                                         </div></div></a>
+                       <a href="#" id="pop18" onclick="ccc(18)">   <div class="grid-box" value="shoes">
+                              <img id="imageresource18" src="images/clothes/SAL3156_200_1.jpg" class="imgradious">
+                            <div class="info">
+                           <p id="title18">SALOMON RUNNING SHOES   $<span id="price18">151,14</span></p>
+                           <p id="description18" style="display:none;">SALOMON XA PRO 3D GORE-TEX NOCTURNE 
+                            TRAIL RUNNING SHOES - AW18<br>PRICE: $151,14</p>
+                               <i class="fa fa-heart"  onclick="changeColor(18)" id="heart18"></i></div>
+                               <div class="addtocartebutton">
+                                  <button  id="button18" class="add" onclick="addtocarte(18);">Add To Cart</button>
+                                 </div></div></a>
+                       <a href="#" id="pop19" onclick="ccc(19)">    <div class="grid-box" value="shoes"> 
+                                  <img  id="imageresource19"  src="images/clothes/SAL2806_200_1.jpg" class="imgradious"> 
+                                      <div class="info">
+                                  <p id="title19">SALOMON RUNNING SHOES <span id="price19">77,27</span></p>
+                                  <p id="description19" style="display:none;">
+                                    SALOMON SPEEDCROSS 4 TRAIL RUNNING SHOES<br>PRICE:
+                                    $77,27</p>
+                         <i class="fa fa-heart"  onclick="changeColor(19)" id="heart19"></i></div>
+                         <div class="addtocartebutton">
+                            <button  id="button19" class="add" onclick="addtocarte(19);">Add To Cart</button>
+                           </div></div></a>
+                         <a href="#" id="pop20" onclick="ccc(20)">    <div class="grid-box" value="shoes"> 
+                            <img  id="imageresource20"  src="images/clothes/SAL1841_200_1.jpg" class="imgradious"> 
+                              <div class="info">
+                                            <p id="title20">SALOMON RUNNING SHOES   $<span id="price20">94,07</span></p>
+                                            <p id="description20" style="display:none;">SALOMON SPEEDCROSS 4 GORE-TEX TRAIL RUNNING SHOES
+                                              <br>PRICE: $94,07</p>
+                                            <i class="fa fa-heart"  onclick="changeColor(20)" id="heart20"></i></div>
+                                            <div class="addtocartebutton">
+                                                <button id="button20" class="add" onclick="addtocarte(20);">Add To Cart</button>
+                                               </div></div></a>
+                    </div> 
+                    
+                    </section>
+        
+         <!--load more/less button div -->
+          <div class="load-btn"><button type="button" id="loadMore"   class="btn btn-info"
+            onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button></div>
+    
+    </main> 
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog"> <!--model to show products details-->
+        <div class="modal-content">
+          <div class="modal-header">
+          <h4 class="modal-title" id="titleofitem"></h4>
+          </div>
+          <div class="modal-body">
+            <img src="" id="imagepreview" >
+            <p id="itemdiscription"> </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info btn-lg text-white" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <button class="top"  onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>
+
+
+
+        <!-- Footer started using bootstrap -->
+<footer class="page-footer font-small mdb-color pt-4">
+        <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left mt-3 pb-3">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h3 class="text-uppercase mb-4 font-weight-bold text-info">H2I</h3>
+              <p>We have been providing top quality fitness equipment for years!  
+                We are continually researching new products and vendors to provide the latest 
+                products to our customers.
+                 By working with multiple vendors and various warehouses we are able to quickly 
+                 deliver a larger variation of products to you, in under a week!</p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a href="sportwear.html">Sport Wears</a>
+              </p>
+              <p>
+                <a href="#">Training Machines</a>
+              </p>
+              <p>
+                <a href="#">Proteins</a>
+              </p>
+              <p>
+                <a href="recipes.html">Recipes</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+              <p>
+                <a href="#!">Contact US</a>
+              </p>
+              <p>
+                <a href="#!">Become a partner</a>
+              </p>
+              <p>
+                <a href="#!">Suppliers</a>
+              </p>
+              <p>
+                <a href="#!">Help</a>
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none">
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p>
+                <i class="fa fa-home mr-3"></i> Sousse, SO 10012, TN</p>
+              <p>
+                <i class="fa fa-envelope mr-3"></i> h2i.info@gmail.com</p>
+              <p>
+                <i class="fa fa-phone mr-3"></i> + 216 51 759 477</p>
+              <p>
+                <i class="fa fa-print mr-3"></i> + 216 718 60 692 </p>
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Footer links -->
+    
+          <hr>
+    
+          <!-- Grid row -->
+          <div class="row d-flex align-items-center">
+    
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8">
+    
+              <!--Copyright-->
+              <p class="text-center text-md-left">Copyright © 2018  <a href="index.html">
+                  <strong>H2I</strong> 
+                </a> . All rights reserved. 
+              </p>
+    
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0">
+    
+              <!-- Social buttons -->
+              <div class="text-center text-md-right">
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+    
+            </div>
+            <!-- Grid column -->
+    
+          </div>
+          <!-- Grid row -->
+    
+        </div>
+        <!-- Footer Links -->
+    
+      
+      <!-- Footer -->
+    </footer> <!-- Footer ended -->
+  </body>  <!-- Body Ended  -->
+</html>

@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<title> H2I | Shop Machines</title><!--title and importation of bootstrap and js -->
+					<meta charset="UTF-8">
+					<meta name="description" content="H2I| Proteins">
+					<link rel="icon" href="images/logotrans.png" type="image/png"/>
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+				
+					<!-- jQuery library -->
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+					<!-- Popper JS -->
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+					<!-- Latest compiled JavaScript -->
+					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+					<meta name="viewport" content="width=device-width, initial-scale=1">
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+				<!--Main CSS-->
+				<link rel="stylesheet" href="css/main.css"> <!-- import css file -->
+	</head>
+<body onload="showanim();"> <!-- Body statred -->
+    <div id="preloader"><!-- animation while loading the page -->
+        <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
+    </div>
+<header><!-- Header started -->
+<!-- nav bar using bootstrap --> 
+<nav class="navbar navbar-expand-xl navbar-light">
+	<a class="navbar-brand" href="index.html">
+		<img id="image-logo1" src="images/heart.png" class="animated zoomIn">
+		<img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
+	  </a>
+	 
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+  
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link" href="sportwear.html">Sport Wears</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="equipement.html">Training Machines</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="protein.html">Proteins</a>
+		  </li>
+		<li class="nav-item">
+			<a class="nav-link" href="recipes.html">Recipes</a>
+		  </li>
+		  
+	  </ul>
+	  <div class="search-container">
+		<form action="/action_page.php">
+		  <input type="text" placeholder="Search.." name="search" id="searchfld">
+		  <button type="submit"><i class="fa fa-search"></i></button>
+		</form> 
+	  </div> <div class="divider"></div><div class="divider"></div>	</div>
+  </nav>
+
+
+<!-- End Navbar -->
+
+</header>
+<main> <!--main started -->  
+<!-- Section Protein -->
+	<div class="container-fluid">
+			<div class="shop-carte">
+					<button class="check" id="myBtn"><i class="fa fa-shopping-cart"></i>Check Cart</button>
+				</div>
+		<div class="filter">
+			<button class="btnn1" id="all">All</button>  <!--filter machines -->  
+			<button class="btnn1" id="haltere">haltere</button>
+			<button class="btnn1" id="disque">disque</button>
+			<button class="btnn1" id="banc">banc</button>
+			<button class="btnn1" id="access">access</button>
+		
+		</div>
+
+		<div class="equipement-content">  <!--machines grid -->  
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere.jpg">
+					<h3>
+						<p class="name">HALTERE HEX DUMBBELL 2,5 KG</p>
+						<p>Sa forme hexagonale, offre une meilleure stabilité.</p>
+						<p>Caoutchouc résistant, pour protéger des chocs.</p>
+					</h3>
+					<b class="price">6.65 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(1)" id="heart1"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque1.jpg">
+					<h3>
+						<p class="name">Disque de fonte</p>
+						<p>Série complète 0,5, 1, 2, 5, 10, et 20 kg, pour mieux vous accompagner dans votre progression.</p>
+						<p>Facilité de préhension à partir de son épaulement</p>
+						<i class="fa fa-heart"  onclick="changeColor(2)" id="heart2"></i>
+					</h3>
+					<b class="price">7.13 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc1.jpg">
+					<h3>
+						<p class="name">Banc de musculation 500 </p>
+						<p>Avec ses positions horizontales, inclinées, assises et déclinés, diversifiez vos entraînements avec le banc 500.</p>
+					</h3>
+					<b class="price">69.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(3)" id="heart3"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access1.jpg">
+					<h3>
+						<p class="name"><strong>Body Power</strong></p>
+						<p>La tonification à petit prix !
+						Conçu pour la tonification musculaire des adducteurs, de la poitrine et des bras.</p>
+					</h3>
+					<b class="price">4.99 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(4)" id="heart4"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere2.jpg">
+					<h3>
+						
+						<p>Intensifiez vos exercices de tonification avec ce disque lesté ! Disponible en 2, 3 et 5kg selon la difficulté souhaitée.</p>
+						<p>Conçu pour vos exercices de renforcement musculaire et de tonification, chez vous ou en salle.</p>
+					</h3>
+					<b class="price">25$</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(5)" id="heart5"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque2.jpg">
+					<h3>
+						<p  class="name"><strong>STOP DISQUE 50 MM</strong></p>
+						<p>Robuste et compact, il garanti un serrage facile et efficace, pour pratiquer en toute sécurité et confiance.</p>
+						<p>Conçu pour la musculation : bloquer vos disques sur une barre de musculation de 50 mm</p>
+					</h3>
+					<b class="price">9.5 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(6)" id="heart6"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc2.jpg">
+					<h3>
+						<p>BANC PLAT</p>
+						<p>Banc permettant des exercices multiples
+						Conçu pour Travailler le développement de multiples muscles</p>
+					</h3>
+					<b class="price">350.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(7)" id="heart7"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access2.jpg">
+					<h3>
+						<p class="name">poignée Cross</p>
+						<p>Poignées pour pompe CrossTraining</p>
+						<p>Pratiquez les exercices de pompe avec le plus grand confort grâce sa poignée ergonomique.Très stable, vous pourrez vous entraîner en toute sécurité.</p>
+					</h3>
+					<b class="price">5.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(8)" id="heart8"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere3.jpg">
+					<h3>
+						<p class="name">Kit Haltères</p>
+						<p>Le kit haltères idéal pour débuter et réaliser de nombreux exercices de musculation</p>
+						<p>Conçu pour La musculation avec haltères</p>
+					</h3>
+					<b class="price">15.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(9)" id="heart9"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque3.jpg">
+					<h3>
+						<p class="name"><strong>Disque musculation 5kg</strong></p>
+						<p>Ce disque en caoutchouc va faciliter votre usage grâce à ses poignées et sa bague en inox</p>
+						<p>Conçu pour la musculation à la maison.</p>
+					</h3>
+					<b class="price">14.26 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(10)" id="heart10"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc3.jpg">
+					<h3>
+						<p  class="name"><strong>BANC DÉVELOPPÉ COUCHÉ</strong></p>
+						<p>Largeur adaptée aux barres olympiques, support de barres 3 hauteurs</p>
+						<p>Conçu pour l'exercice du développé couché par extension verticale</p>
+					</h3>
+					<b class="price">720.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(11)" id="heart11"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access3.jpg">
+					<h3>
+						<p class="name"><strong>HAND GRIP AJUSTABLE</strong></p>
+						<p>Hand grip réglable de 10 à 40 kg, à partir de sa molette de serrage.
+						Les poignées sont en caoutchouc et assurent un grand confort pendant l'exercice</p>
+					</h3>
+					<b class="price">5.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(12)" id="heart12"></i>
+				</div>
+
+			</div>
+			<div class="boxmore">  <!-- more machines-->  
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere4.jpg">
+					<h3>
+						<p class="name"><strong>HALTERE HEX DUMBBELL 7.5KG</strong></p>
+						<p>Sa forme hexagonale, offre une meilleure stabilité.</p>
+						<p>caoutchouc résistant, pour protéger des chocs.</p>
+					</h3>
+					<b class="price">19$</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(13)" id="heart13"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque4.jpg">
+					<h3>
+						<p  class="name"><strong>DISQUE BUMPER 15KG JAUNE</strong></p>
+						<p>Disque très solide pour la pratique du cross-training</p>
+						<p>Conçu pour la musculation et le cross-training</p>
+					</h3>
+					<b class="price">71.26 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(14)" id="heart14"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc4.jpg">
+					<h3>
+						<p  class="name"><strong>BANC À LOMBAIRES</strong></p>
+						<p>Cliquets de réglages verrouillables, appui jambier réglable.
+							Conçu pour Travailler le développement de la partie lombaires.</p>
+					</h3>
+					<b class="price">750.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(15)" id="heart15"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access4.jpg">
+					<h3>
+						<p  class="name"><strong>POIGNETS DE PROTECTION ROUGE</strong></p>
+						<p>Les bandes de poignet ont été étudiées pour des séances d'entraînements exigeantes, procurant maintien et confort. L'insert pouce permet de positionner rapidement le produit.</p>
+					</h3>
+					<b class="price">7.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(16)" id="heart16"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere5.jpg">
+					<h3>
+						<p  class="name"><strong>HALTERE 5KG HEX DUMBBELL</strong></p>
+						<p>Sa forme hexagonale, offre une meilleure stabilité.</p>
+						<p>caoutchouc résistant, pour protéger des chocs.</p>
+					</h3>
+					<b class="price">14.26 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(17)" id="heart17"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque5.jpg">
+					<h3>
+						<p  class="name"><strong>DISQUE BUMPER 20KG BLEU</strong></p>
+						<p>Disque très solide pour la pratique du cross-training</p>
+						<p>Conçu pour la musculation et le cross-training</p>
+					</h3>
+					<b class="price">95.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(18)" id="heart18"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc5.jpg">
+					<h3>
+						<p  class="name"><strong>BANC LARRY SCOTT</strong></p>
+						<p>Siège réglable en hauteur par vérin à gaz. Repose barre intégrée.
+							Conçu pour Travailler le développement des biceps</p>
+					</h3>
+					<b class="price">800.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(19)" id="heart19"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access5.jpg">
+					<h3>
+						<p  class="name"><strong>Roue abdominaux  </strong></p>
+						<p>Sur les genoux ou sur la pointe des pieds, en mode stable ou instable, travailler les abdominaux, les obliques, etc.Ce produit vous accompagnera dans votre progression</p>
+					</h3>
+
+					<b class="price">8.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(20)" id="heart20"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item haltere">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/haltere6.jpg">
+					<h3>
+						<p  class="name"><strong>Kit PUMP 20 kg musculation</strong></p>
+						<p>Le kit idéal pour sculpter votre corps.</p>
+						<p>Conçu pour se tonifier l'ensemble du corps.</p>
+					</h3>
+					<b class="price">69.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(21)" id="heart21"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item disque">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/disque6.jpg">
+					<h3>
+						<p  class="name"><strong>Disque musculation 15 kg</strong></p>
+						<p>Ce disque en caoutchouc va faciliter votre usage grâce à ses poignées et sa bague en inox</p>
+						<p>Conçu pour la musculation à la maison.</p>
+					</h3>
+					<b class="price">25$</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(22)" id="heart22"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item banc">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/banc6.jpg">
+					<h3>
+						<p  class="name"><strong>PLANCHE ABDO RÉGLABLE</strong></p>
+						<p>Cliquets de réglages verrouillables. Réglages de l’inclinaison (4 positions) et du blocage des pieds Conçu pour Travailler le développement de la partie abdominale</p>
+					</h3>
+					<b class="price">860.00 $</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(23)" id="heart23"></i>
+				</div>
+
+			</div>
+			<div class="equipement-item access">
+				<div class="item-head">
+					<img class="image" src="imgs/musc/access6.jpg">
+					<h3>
+						<p  class="name"><strong>Triangle de tirage musculation</strong></p>
+						<p>Ce produit est adapté à tous les exercices de tirage.
+						Grace à sa bonne prise en main vous pourrez travailler efficacement les muscles du dos.</p>
+					</h3>
+					<b class="price">19.99$</b>
+				</div>
+				<div class="item-footer">
+					<button class="add" data-action="Add_to_cart">Add To Cart</button>
+					<i class="fa fa-heart"  onclick="changeColor(24)" id="heart24"></i>
+				</div>
+
+			</div> 
+		</div> </div>
+		  <!--load less button div -->
+		<div class="load-btn"><button type="button" id="loadless"   class="btn btn-info"
+			onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load Less Items</button></div> 
+
+
+	</div>
+<!--End Section Protein -->
+
+<!-- Go Top -->
+<button class="top"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>
+
+<!-- start Checking Cart -->
+
+<div class="modal" id="myModal">
+	<div class="cart modal-content-check">
+		<h6>Your Carte</h6>
+		
+	</div>
+</div>
+
+
+<!-- End Checking Cart -->
+</main>
+
+
+        <!-- Footer started using bootstrap -->
+<footer class="page-footer font-small mdb-color pt-4">
+	<div class="container text-center text-md-left">
+	  <div class="row text-center text-md-left mt-3 pb-3">
+		<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+		  <h3 class="text-uppercase mb-4 font-weight-bold text-info">H2I</h3>
+		  <p>We have been providing top quality fitness equipment for years!  
+			We are continually researching new products and vendors to provide the latest 
+			products to our customers.
+			 By working with multiple vendors and various warehouses we are able to quickly 
+			 deliver a larger variation of products to you, in under a week!</p>
+		</div>
+		<hr class="w-100 clearfix d-md-none">
+		<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+		  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+		  <p>
+			<a href="sportwear.html">Sport Wears</a>
+		  </p>
+		  <p>
+			<a href="equipement.html">Training Machines</a>
+		  </p>
+		  <p>
+			<a href="protein.html">Proteins</a>
+		  </p>
+		  <p>
+			<a href="recipes.html">Recipes</a>
+		  </p>
+		</div>
+		<hr class="w-100 clearfix d-md-none">
+		<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+		  <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
+		  <p>
+			<a href="#!">Contact US</a>
+		  </p>
+		  <p>
+			<a href="#!">Become a partner</a>
+		  </p>
+		  <p>
+			<a href="#!">Suppliers</a>
+		  </p>
+		  <p>
+			<a href="#!">Help</a>
+		  </p>
+		</div>
+		<hr class="w-100 clearfix d-md-none">
+		<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+		  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+		  <p>
+			<i class="fa fa-home mr-3"></i> Sousse, SO 10012, TN</p>
+		  <p>
+			<i class="fa fa-envelope mr-3"></i> h2i.info@gmail.com</p>
+		  <p>
+			<i class="fa fa-phone mr-3"></i> + 216 51 759 477</p>
+		  <p>
+			<i class="fa fa-print mr-3"></i> + 216 718 60 692 </p>
+		</div>
+		<!-- Grid column -->
+
+	  </div>
+	  <!-- Footer links -->
+
+	  <hr>
+
+	  <!-- Grid row -->
+	  <div class="row d-flex align-items-center">
+
+		<!-- Grid column -->
+		<div class="col-md-7 col-lg-8">
+
+		  <!--Copyright-->
+		  <p class="text-center text-md-left">Copyright © 2018  <a href="index.html">
+			  <strong>H2I</strong> 
+			</a> . All rights reserved. 
+		  </p>
+
+		</div>
+		<!-- Grid column -->
+
+		<!-- Grid column -->
+		<div class="col-md-5 col-lg-4 ml-lg-0">
+
+		  <!-- Social buttons -->
+		  <div class="text-center text-md-right">
+			<ul class="list-unstyled list-inline">
+			  <li class="list-inline-item">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+				  <i class="fa fa-facebook"></i>
+				</a>
+			  </li>
+			  <li class="list-inline-item">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+				  <i class="fa fa-twitter"></i>
+				</a>
+			  </li>
+			  <li class="list-inline-item">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+				  <i class="fa fa-google-plus"></i>
+				</a>
+			  </li>
+			  <li class="list-inline-item">
+				<a class="btn-floating btn-sm rgba-white-slight mx-1">
+				  <i class="fa fa-linkedin"></i>
+				</a>
+			  </li>
+			</ul>
+		  </div>
+
+		</div>
+		<!-- Grid column -->
+
+	  </div>
+	  <!-- Grid row -->
+
+	</div>
+	<!-- Footer Links -->
+
+  
+  <!-- Footer -->
+</footer> <!-- Footer ended -->
+ 
+
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script><!-- import js file -->
+<script src="js/check.js"></script><!-- import js file -->
+
+
+</body> <!-- Body Ended  -->
+</html>
